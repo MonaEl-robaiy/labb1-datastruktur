@@ -39,8 +39,7 @@ public class LinkedList {
         }
     }
 //inte klar
-    public boolean contains(Object o) {
-            String e = null;
+    public boolean contains(int e) {
         while (o==null;e == null){
 
             if(o==null? e == null : o.equals(e)){
