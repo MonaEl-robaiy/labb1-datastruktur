@@ -1,17 +1,17 @@
 package com.company;
 
-
 public class LinkedList {
     private Node head;
-    private int listCount;
     private int size;
+    private Object Node;
+
 
     public class Node {
         protected int value;
         protected Node next;
 
-        public Node(int v) {
-            value = v;
+    public Node(int v) {
+        value = v;
         }
     }
 
@@ -29,33 +29,32 @@ public class LinkedList {
 
         }
     }
-// inte klat
-    public void add(int i, int e) {
+    public void add(int index, int e) {
+        Node newNode = new Node(e);
+        if(index == 0){
+            newNode.next = head;
+            head = newNode;
+            return;
+        }
+        int i = 0;
         Node n = head;
-        head = new Node(e);
-        while (i < e) {
+        while (i < index - 1) {
             n = n.next;
             i++;
         }
+        newNode.next = n.next;
+        n.next = newNode;
     }
-//inte klar
     public boolean contains(int e) {
-        while (o==null;e == null){
-
-            if(o==null? e == null : o.equals(e)){
+        Node n = head;
+        while (Node!=null) {
+            if (n.value == e) {
                 return true;
-
             }
+        }       return false;
 
-        }
-
-       /*
-        Node n=head;
-        if (n.equals(e)){
-            return true;
-        }
-        return false;*/
     }
+
 
     public int get(int index) {
         int i = 0;
